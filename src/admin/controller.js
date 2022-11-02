@@ -2,6 +2,8 @@ const { DateTime } = require('luxon');
 const service = require('./service');
 
 const getBestProfession = async (req, res) => {
+  // I decided to proceed with req as DI container
+  // Repository level might be implemented
   const { Contract, Job, Profile } = req.app.get('models');
   const { start, end } = req.query;
 
